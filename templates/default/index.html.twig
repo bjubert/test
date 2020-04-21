@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+{% endblock %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+    <main class="articles">
+        <article class="accueil1 article">
+            <div class="paragraphes">
+                <div class="blockTitre blockTitre1"><h3 class="titreEncadre">Nos Prestations</h3></div>
+                <p class="paragraphe">Toute l'équipe du Marigny est heureuse de vous accueillir dans son établissement, restaurant traditionnel servant des plats préparés avec soin.</p>
+                <p class="paragraphe">Fournisant aussi un service traiteur nous serions heureux de cuisiner pour vos anniversaires, mariages et autres événement.<br>
+                    Nous avons aussi une carte de plats a emporter.</p>
+                <img src="{{ asset('css/images/salle.jpg') }}" class="image">
+                <div class="bouton"><a class="bouton1 LienBouton" href="{{ path('prestations') }}">en savoir plus</a></div>
+            </div>
+        </article>
+
+        <article class="accueil2 article">
+            <div class="paragraphes">
+                <div class="blockTitre blockTitre1"><h3 class="titreEncadre">Notre Cuisine</h3></div>
+                <p class="paragraphe">Au Marigny nous vous proposons une cuisine de qualité, faite à partir de produits frais, des plat copieux et pour un rapport qualité prix interressant.</p>
+                <p class="paragraphe">Ici vous trouverez une selection de photos de quelques entrées, plats et desserts que nous proposons à la carte du restaurant ou du traiteur.</p>
+                <img src="{{ asset('css/images/assiette1.jpg') }}" class="image">
+                <div class="bouton"><a class="bouton2 LienBouton" href="{{ path('galerie') }}">voir les photos</a></div>
+            </div>
+        </article>
+
+        <article class="accueil1 article">
+            <div class="paragraphes">
+                <div class="blockTitre blockTitre1"><h3 class="titreEncadre">Nous Contacter</h3></div>
+                <p class="paragraphe">Pour reserver, prendre un rendez-vous ou pour tout autre question nous sommes à votre disposition. N'hésitez pas a nous contacter.</p>
+            </div>
+            <img src="{{ asset('css/images/contact1.png') }}" class="image">
+            <div class="bouton"><a href="{{ path('contact') }}" class="bouton1 LienBouton">nous contacter</a></div>
+        </article>
+    </main>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}">
+        {#<link rel="stylesheet" type="text/css" href="{{ asset('css/fiche_css1.css') }}">#}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/common.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, shrink-to-fit=no">
+        <title>{% block title %}Le Marigny{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body>
+        <header class="header">
+            <div id="barreLogin">
+                <ul>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="barreLoginElem"><p class="nomUser">Bonjour {{ user.identifiant }}</p></li>
+                    <li class="barreLoginElem"><a href="{{ path('easyadmin') }}">Administrer</a></li>
+                    <li class="barreLoginElem"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                {% elseif is_granted('ROLE_ENTREPRISE') %}
+
+                {% elseif is_granted('ROLE_USER') %}
+                    <li class="barreLoginElem"><p class="nomUser">Bonjour {{ user.identifiant }}</p></li>
+                    <li class="barreLoginElem"><a href="{{ path('profil', {'id': user.id}) }}">Profil</a></li>
+                    <li class="barreLoginElem"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                {% else %}
+                    <li class="barreLoginElem"><a href="{{ path('app_login') }}">Se connecter</a></li>
+                {% endif %}
+                </ul>
+            </div>
+            <div class="titre">
+                <div class="titres">
+                    <h1>Le Marigny</h1>
+                    <h2>Bar-Restaurant-Traiteur</h2>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{{ path('default') }}">Accueil</a></li>
+                <li><a href="{{ path('prestations') }}">Prestations</a></li>
+                <li><a href="{{ path('galerie') }}">Galerie</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+
+        <footer>Restaurant le Marigny</footer>
+    </body>
+</html>

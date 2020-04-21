@@ -1,0 +1,34 @@
+/*page accueil*/
+
+
+.accueil1{
+    color: white;
+    margin-top: 1rem;
+    background-color: #293133;
+    line-height: 1.4rem;
+}
+
+.accueil2{
+    color: #293133;
+    margin-top: 1rem;
+    background-color: white;
+    line-height: 1.4rem;
+}
+
+.image{
+    height: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-height: 25rem;
+}
+
+.paragraphes{
+    width: 70%;
+}
+
+.paragraphe{
+    margin-bottom: 1rem;
+}
+
+/*fin page Accueil*/

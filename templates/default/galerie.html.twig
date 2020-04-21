@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}<link rel="stylesheet" type="text/css" href="{{ asset('css/galerie.css') }}">{% endblock %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+    <main>
+
+        <article>
+            <h3>Dinatoire</h3>
+            <ul class="galerie">
+                {% for i in dinatoire %}
+                    <li>
+                        <figure>
+                            <img class="imageGalerie" src="{{ vich_uploader_asset(i, 'imageFile') }}" alt="">
+                            <figcaption class="invisible">{{ i.nom }}</figcaption>
+                        </figure>
+                    </li>
+                {% endfor %}
+            </ul>
+        </article>
+
+
+        <article>
+            <h3>Entrée</h3>
+            <ul class="galerie">
+                {% for i in entree %}
+
+                    <li>
+                        <figure>
+                            <img class="imageGalerie" src="{{ vich_uploader_asset(i, 'imageFile') }}" alt="">
+                            <figcaption class="invisible">{{ i.nom }}</figcaption>
+                        </figure>
+                    </li>
+                {% endfor %}
+            </ul>
+        </article>
+
+
+        <article>
+            <h3>Plat</h3>
+            <ul class="galerie" >
+                {% for i in plat %}
+                    <li>
+                        <figure>
+                            <img class="imageGalerie" src="{{ vich_uploader_asset(i, 'imageFile') }}" alt="">
+                            <figcaption class="invisible">{{ i.nom }}</figcaption>
+                        </figure>
+                    </li>
+                {% endfor %}
+            </ul>
+        </article>
+
+
+        <article>
+            <h3>Dessert</h3>
+            <ul class="galerie" >
+                {% for i in dessert %}
+                    <li>
+                        <figure>
+                            <img class="imageGalerie" src="{{ vich_uploader_asset(i, 'imageFile') }}" alt="">
+                            <figcaption class="invisible">{{ i.nom }}</figcaption>
+                        </figure>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </article>
+
+    </main>
+
+{% endblock %}
+
+{#{% block javascripts %}<script src="{{ asset ('js/comportements.js') }}"></script>{% endblock %}#}

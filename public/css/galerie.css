@@ -1,0 +1,25 @@
+h3{
+    text-align: center;
+    text-decoration: underline #DB0101;
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.imageGalerie{
+    width: 200px;
+}
+
+img{
+    width: 150px;
+}
+
+.invisible{
+    display: none;
+}

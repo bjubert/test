@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/prestation.css') }}">
+{% endblock %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+    <main class="prestations">
+        <div class="blockTitre blockTitre2"><h3 class="titreEncadre">Le Restaurant</h3></div>
+
+        <article class="prestation1">
+
+            <div class="menuSemaine">
+                <h4>Du lundi au vendredi</h4>
+                <div class="menusResponsive">
+                    <div class="menus menus1">
+                        <div class="titreMenu"><h5 class="prixMenu">Menu du jour 13€00</h5></div>
+
+                        <p>Buffet de hors d'oeuvres à volonté
+                        <HR size=1 align=center width="50%">
+                        Plat du jour<br><br>
+                        ou  Poisson du jour<br><br>
+                        ou  Jambon grillé<br><br>
+                        ou  Entrecotte 200g (supplement 6€00)
+                        <HR size=1 align=center width="50%">
+                        Plateau de fromages
+                        <HR size=1 align=center width="50%">
+                        dessert du jour
+                        <HR size=1 align=center width="50%">
+                        vin et café</p>
+                    </div>
+
+                    <div class="menus menus1">
+
+                        <div class="titreMenu">
+                            <h5 class="prixMenu">Menu enfant 7€00</h5>
+                            <p>(toute la semaine)</p>
+                        </div>
+
+                        <p>Steak haché<br><br>
+                            ou Poisson pané<br><br>
+                            ou Omelette
+                        <HR size=1 align=center width="50%">
+                        Frites
+                        <HR size=1 align=center width="50%">
+                        2 Boules de glaces au choix<br><br>
+                        1 Surprise</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuWE">
+                <h4>Le weekend</h4>
+                <div class="menusResponsive2">
+                    <div class="menus menus2">
+                        <div class="titreMenu"><h5 class="prixMenu">Menu à 18€90</h5>
+                            <p>(1 entrée, 1 poisson ou 1 viande, fromage ou dessert)</p></div>
+
+                        <div class="titreMenu"><h5 class="prixMenu">Menu à 25€90</h5>
+                            <p>(1 entrée, 1 poisson et 1 viande, fromage ou dessert)</p></div>
+
+                        <p>Salade landaise (gésiers confits et magets fumés)<br><br>
+                            ou Salade de Roquefort, pommes et noix<br><br>
+                            ou Salade Campagnarde (lardons, oeufs poché)<br><br>
+                        <HR size=1 align=center width="50%">
+                        Filet de Tacaud beurre blanc<br><br>
+                        ou Coeur de merlu à la fondue de poireau
+                        <HR size=1 align=center width="50%">
+                        Cuisse de canard confit et sa pomme<br><br>
+                        ou Piéce de boeuf grillé beurre maître d'hôtel<br><br>
+                        ou Pavé d'andouille grillé moutarde à l'ancienne
+                        <HR size=1 align=center width="50%">
+                        Fromage<br><br>
+                        ou dessert au choix :<br>
+                        Mousse chocolat, crème caramel, ile flottante, crème brulée, 2 boules de glaces au choix</p>
+                    </div>
+
+                    <div class="menus menus3">
+                        <div class="titreMenu"><h5 class="prixMenu">Menu à 26€90</h5>
+                            <p>(1 entrée, 1 poisson ou 1 viande, fromage et dessert)</p></div>
+
+                        <div class="titreMenu"><h5 class="prixMenu">Menu à 33€90</h5>
+                            <p>(1 entrée, 1 poisson et 1 viande, fromage et dessert)</p></div>
+
+                        <p>Poêlée de Saint-Jacques aux agrumes et magrets fumés<br><br>
+                            ou Saumon fumé maison crème ciboulette<br><br>
+                            ou Salade de saint Maure de Touraine chaud et lardons<br><br>
+                            ou Coeur de merlu beurre blanc</p>
+                        <HR size=1 align=center width="50%">
+                        Cassolette de Saint-Jacques à la Charentaise<br><br>
+                        ou Pavé de Saumon braisé au porto et raisins secs
+                        <HR size=1 align=center width="50%">
+                        Pavé de boeuf grillé beurre maître d'hôtel<br><br>
+                        ou Filets de cailles sauce Morilles<br><br>
+                        ou Filet mignons sauce Roquefort
+                        <HR size=1 align=center width="50%">
+                        Fromages ou chèvre chaud<br><br>
+                        et dessert au choix :<br>
+                        Mousse chocolat, crème caramel, ile flottante, crème brulée, moelleux au chocolat, 3 boules de glaces au choix</p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="prestation2">
+            <div class="blockTitre blockTitre2"><h3 class="titreEncadre">Plats à emporter et traiteur</h3></div>
+
+            <h4>Plats à emporter</h4>
+            <p class="texte">Nous proposons un ensemble de plats à emporter que vous pourrez retrouver sur notre carte de plats à emporter</p>
+
+            <div class="bouton"><a class="bouton2 LienBouton" href="{{ asset ('menu.pdf') }}">plats à emporter</a></div>
+
+            <h4>Traiteur</h4>
+            <p class="texte">Un anniversaire, un mariage, un repas professionnel ou pour tout autre événement nous serions heureux de cuisiner pour vous<br><br>
+                Avec la possibilité d'un prêt de materiel en fonction de la prestation (camion frigo, conteneur isotherme chauffant, four portable sur roulettes, percolateur à café)</p>
+
+            <div class="imgMateriel">
+                <img src="{{ asset('css/images/four.jpg') }}" class="materiel">
+                <img src="{{ asset('css/images/perco.jpg') }}" class="materiel">
+                <img src="{{ asset('css/images/camion.jpg') }}" class="materiel">
+                <img src="{{ asset('css/images/norvegienne.jpg') }}" class="materiel">
+            </div>
+
+            <p class="texte">Pour un renseignement, une réservation ou pour prendre un rendez-vous n'hésitez pas à nous contacter</p>
+            <div class="bouton"><a class="bouton2 LienBouton" href="Contact.html" class="bouton1">nous contacter</a></div>
+        </article>
+    </main>
+{% endblock %}

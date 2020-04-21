@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+    <article class="contact1">
+        <h3 class="titreContact">Nos horaires</h3>
+        <div class="horaires">
+            <ul>
+                <li>Lundi : 11h00 - 15h00</li>
+                <li>Mardi : 9h00 - 15h00</li>
+                <li>Mercredi : 9h00 - 20h00</li>
+                <li>Jeudi : 9h00 - 20h00</li>
+                <li>Vendredi : 9h00 - 16h00</li>
+                <li>Samedi : ouverture sur réservation</li>
+                <li>Dimanche : 10h00 - 18h00</li>
+            </ul>
+        </div>
+    </article>
+
+    <article class="contact1">
+        <h3 class="titreContact">Nous contacter</h3>
+        <ul class="listeContact">
+            <li class="contacts"><img src="css/images/appel.png" class="imgContact">Numéro de téléphone : 05.49.82.08.50</li>
+            <li class="contacts"><img src="css/images/mail.png" class="imgContact">Email : lemarigny.combrand@orange.fr</li>
+        </ul>
+    </article>
+
+    <article class="contact1">
+        <h3 class="titreContact">Où nous trouver</h3>
+        <p><img src="css/images/adresse.png" class="imgContact">Adresse : 8 rue du calvaire, 79140, Combrand</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10912.148094355916!2d-0.6885135!3d46.8626438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xde68522b4a614b8e!2sLe+Marigny!5e0!3m2!1sfr!2sfr!4v1553785881412" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </article>
+{% endblock %}

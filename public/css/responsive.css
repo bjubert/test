@@ -1,0 +1,70 @@
+@media screen and (min-width: 1024px){
+    .header{
+        height: 50vh;
+    }
+    
+    h1{
+        font-size: 3.5rem;
+    }
+    
+    h2{
+       font-size: 2rem; 
+    }
+    
+    .titres{
+        width: 25rem;
+    }
+    
+    nav ul{
+        font-size: 1.5rem;
+    }
+      
+    .articles{
+        display: flex;
+    }
+
+    .prestation1{
+        display: flex;
+    }
+    
+    .menusResponsive2{
+        display: flex;
+    }
+    
+    .menuSemaine{
+        height: 40rem;
+    }
+    
+    .menuWE{
+        height: 40rem;
+        width: 66%;
+    }
+    
+    .menus1{
+        width: 100%;
+    }
+    
+    .menus2{
+        width: 45%;
+    }
+    
+    .menus3{
+        width: 45%;
+    }
+    
+    
+    .blockTitre2{
+        margin-top: 2rem;
+    }
+    
+    
+}
+
+@media screen and (min-width: 500px){
+    .imageGalerie{
+        width: 220px;
+        height: 153px;
+        padding: 10px;
+    }
+
+}

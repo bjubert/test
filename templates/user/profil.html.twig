@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/profil.css') }}">
+{% endblock %}
+
+{% block body %}
+    <article id="factureListe">
+        <h3>Consultez vos factures</h3>
+        <table id="tableauFacture">
+            <tr>
+                <td class="date">date</td>
+                <td class="pdf">PDF</td>
+            </tr>
+            {% for i in facture %}
+                <tr>
+                    <td class="date">{{i.date|date("m/d/Y")}}</td>
+                    <td class="pdf"><a href="{{ asset('uploads/pdf_facture/' ~ i.pdf) }}">Télécharger pdf</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </article>
+
+
+{% endblock %}

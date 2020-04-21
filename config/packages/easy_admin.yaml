@@ -1,0 +1,106 @@
+easy_admin:
+    #on affiche au max 15 lignes par entités
+    list:
+        max_results: 15
+
+    #format de la date
+    formats:
+        date: 'd/m/Y'
+
+
+
+    entities:
+
+        #formulaire partie Utilisateur
+        Utilisateur:
+            class: App\Entity\Utilisateur
+            controller: App\Controller\UserAdminController
+
+            list:
+                fields:
+                    - id
+                    - identifiant
+                    - { property: 'email', label: 'email', type: 'email' }
+                    - { property: 'telephone', label: 'telephone', type: 'tel' }
+
+            showz:
+                fields:
+                    - id
+                    - identifiant
+                    - { property: 'email', label: 'email', type: 'email' }
+                    - { property: 'telephone', label: 'telephone', type: 'tel' }
+
+            form:
+                fields:
+                    - { property: 'identifiant', type: 'text'}
+                    - { property: 'plainPassword',label: 'Mot de passe', type: 'password', type_options: { required: false }}
+                    - { property: 'email', type: 'email'}
+                    - { property: 'telephone', type: 'tel'}
+
+
+
+
+
+        #formulaire partie Image
+        Image:
+            class: App\Entity\Image
+
+            list:
+                fields:
+                    - id
+                    - { property: 'image', label: 'image', type: 'image', base_path: '%app.path.images_galerie%' }
+                    - nom
+                    - id categorie
+                    - { property: 'visible', label: 'visible', type: 'boolean' }
+
+            show:
+                fields:
+                    - id
+                    - { property: 'image', label: 'image', type: 'image', base_path: '%app.path.images_galerie%'  }
+                    - nom
+                    - id categorie
+                    - { property: 'visible', label: 'visible', type: 'boolean' }
+
+            form:
+                fields:
+                    - { property: 'imageFile', label: 'image', type: 'vich_image'}
+                    - { property: 'nom', type: 'text' }
+                    - { property: 'visible'}
+                    - idCategorie
+
+
+
+
+
+        #formulaire partie Facture
+        Facture:
+            class: App\Entity\Facture
+
+            list:
+                fields:
+                    - id
+                    - id client
+                    - { property: 'date', label: 'date', type: 'date'}
+                    - { property: 'pdf', template: 'uploads/pdf.html.twig', base_path: '%app.path.pdf_facture%' }
+
+
+            show:
+                fields:
+                    - id
+                    - id client
+                    - { property: 'date', label: 'date', type: 'date'}
+                    - { property: 'pdf', template: 'uploads/pdf.html.twig', base_path: '%app.path.pdf_facture%' }
+
+
+            form:
+                fields:
+                    - { property: 'id_client', label: 'id client'}
+                    - { property: 'date', type: 'date'}
+                    - { property: 'pdfDoc', type: 'vich_file' }
+
+    design:
+
+        assets:
+            # mettre ici tous les liens css (si il y en a)
+            css:
+                # - 'chemin_absolu/doc.css'

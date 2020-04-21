@@ -1,0 +1,49 @@
+.listeContact{
+    text-decoration: none;
+}
+
+.contact1{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contacts{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.imgContact{
+    margin-right: 0.5rem;
+}
+
+iframe{
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.titreContact{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-decoration: underline #DB0101;
+    text-align: center;
+}
+
+
+.zoneTexte{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horaires{
+    line-height: 1.5rem;
+}

@@ -1,0 +1,24 @@
+h3{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline #DB0101;
+    padding: 2rem;
+}
+
+#factureListe{
+    margin: auto;
+}
+
+#tableauFacture{
+    margin: auto;
+    border: black solid 2px;
+    margin-bottom: 2rem;
+}
+
+.date{
+    padding: 1rem 5rem 1rem 3rem;
+}
+
+.pdf{
+    padding: 1rem 3rem 1rem 5rem;
+}

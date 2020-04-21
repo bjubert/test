@@ -1,0 +1,249 @@
+/*palette de couleur: gris antracite = 293133
+                      gris = 4B4B4B
+                      rouge = DB0101*/
+
+/*dimensions trait: size=1 align=center width="50%"*/
+
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family:"Gudea", sans-serif;
+}
+
+/*header*/
+
+.header{
+    background-image: url("images/resto.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    height: 30vh;
+    position: relative;
+}
+
+.titre{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+}
+
+.titres{
+    background-color: rgba(94,92,92,0.5);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 18rem;
+}
+
+h1{
+    color: #E3C447;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#barreLogin{
+    background-color: #293133;
+    position: absolute;
+    padding: 1rem 0 1rem 1rem;
+    top: 0;
+}
+
+
+#barreLogin ul{
+    display: flex;
+    white-space:nowrap;
+}
+
+
+#barreLogin a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+#barreLogin .barreLoginElem{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-right: 1rem;
+}
+
+#barreLogin .barreLoginElem:hover{
+    text-decoration: underline;
+}
+
+.nomUser{
+    color: white;
+}
+
+#barreLogin ul li{
+    display: inline-block;
+}
+
+
+/*FIN header*/
+
+
+
+
+
+/*menu*/
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: #293133;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+nav li{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav li:hover{
+    background-color: #DB0101;
+}
+/*FIN menu*/
+
+
+
+
+
+
+/*éléments commum à plusieurs pages*/
+
+
+/*concerne les titres encadrés*/
+.blockTitre{
+    background-color: white;
+    color: black;
+    display: flex;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;}
+
+.blockTitre1{
+    max-width: 20rem;
+}
+
+.blockTitre2{
+    max-width: 22rem;
+}
+
+
+.titreEncadre{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 95%;
+    height: 85%;
+    margin: 1rem;
+    border-left:5px solid #DB0101;
+    border-right:5px solid #DB0101;
+    border-bottom:5px solid #DB0101;
+    position:relative;
+}
+
+.titreEncadre:before{
+    content:"";
+    border-top:5px solid #DB0101;
+    border-left:5px solid #DB0101;
+    position:absolute;
+    top:-5px;
+    bottom:0;
+    left:-5px;
+    width:30%;
+}
+
+.titreEncadre:after{
+    content:"";
+    border-top:5px solid #DB0101;
+    border-right:5px solid #DB0101;
+    position:absolute;
+    top:-5px;
+    bottom:0;
+    right:-5px;
+    width:30%;
+}
+
+
+/*permet de centrer plusieurs éléments*/
+div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*concerne les boutons liens*/
+.LienBouton{
+    display: block;
+    width: 10rem;
+    background-color: #DB0101;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bouton{
+    width: 12rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.bouton1:hover{
+    background-color: white;
+    color: #293133;
+}
+
+.bouton2:hover{
+    background-color: #293133;
+    color: white;
+}
+
+
+/*FIN*/
+
+
+
+
+
+
+
+
+/*footer*/
+
+footer{
+
+    background-color: #DB0101;
+    padding: 1rem;
+    color: white;
+
+}
+/*FIN footer

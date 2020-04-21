@@ -1,0 +1,20 @@
+.h3{
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+#formLogin{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+#loginButton{
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
